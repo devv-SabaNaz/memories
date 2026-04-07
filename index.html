@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Best Friend</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS -->
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💗";
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = Math.random() * 15 + 15 + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <img src="photo/friend.PNG" class="avatar">
+
+        <h1>For My Best Friend 💞</h1>
+
+        <div class="typing" id="typing"></div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <h2>A Friend Who Feels Like Gaon ka Gunda😂</h2>
+
+            <p>
+                You are not just my best friend — you are my comfort place. In a world where people come and go, you stayed constant. Your laughter fixes my worst days and your presence makes ordinary moments feel magical.
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <h2>Our Friendship Story💞</h2>
+
+            <div class="grid">
+
+                <div class="box">
+
+                    <h3>Friendship💞</h3>
+
+                    <p>
+                        Our friendship started with random conversations and slowly became one of the most important chapters of my life. Every laugh, every memory, and every silly moment with you became unforgettable.
+                    </p>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>Why You're Soo Special To Meeeeeeeeeee💖</h3>
+
+                    <ul>
+                        <li>Always supports me🤍</li>
+                        <li>Makes me laugh endlessly ❤️‍🩹</li>
+                        <li>Understands my silence💖</li>
+                        <li>Loyal and real 💖</li>
+                        <li>Turns bad days into good ones 💖</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card message">
+
+            <h2>Our Memories 🎬</h2>
+
+            <video width="40%" controls style="border-radius:15px; margin-top:15px;margin-bottom: 15px;">
+
+                     <source src="memories/Mine Badsha slamat.mp4" type="video/mp4">                 
+
+                      </video>
+
+            <p style="margin-top:10px;">A small memory that reminds me how special our friendship is 💗</p>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <h2>Funny Truth About Us 😂</h2>
+
+            <p>
+                Our friendship is 50% laughter, 30% roasting, and 20% pure chaos. You are my unpaid therapist, professional troublemaker, and favorite human all in one.
+            </p>
+
+        </div>
+        <div class="card message">
+
+            <h2>A Little Surprise For You 🎁</h2>
+
+            <button onclick="showMessage()" class="surprise-btn">
+              Click Here For Something From Me 💌
+          </button>
+
+            <div id="secretMessage" class="secret-box">
+
+                💌 I Don't Say This Often… Maybe I joke a lot, maybe we roast each other, and maybe we act like everything is just fun and chaos. But the truth is… You are someone very special in my life. You saw my weird side, my overthinking, my random moods, and still
+                chose to stay. With you I never feel like I have to pretend. I can just be myself. You made ordinary days feel memorable, and your presence turned simple moments into stories I will always remember. If life ever becomes busy or we don't
+                talk as much one day, I hope you never forget this: There is someone who appreciates you deeply, who silently wishes happiness for you, and who feels lucky to have you as a best friend. Thank you for being part of my life. — From the friend
+                who truly cares about you 💗
+
+            </div>
+
+        </div>
+
+        <!-- FINAL MESSAGE -->
+
+        <div class="card message">
+
+            <h2>A Message For You 💌</h2>
+
+            <p>
+                Thank you for being the friend who stayed during confusing days, laughed during nonsense moments, and supported me without conditions. No matter where life takes us, you will always be my best friend and one of my favorite people.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with memories, laughter & friendship 💗
+        <br> Dosti Wala I love U💗
+    </div>
+
+    <!-- TYPING ANIMATION -->
+
+    <script>
+        const text = "You are my favorite human and my best friend forever 'INSHAALLAH' 💗";
+
+        let i = 0;
+
+        function typing() {
+            if (i < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, 60);
+            }
+        }
+
+        typing();
+    </script>
+    <script>
+        function showMessage() {
+
+            let msg = document.getElementById("secretMessage");
+
+            if (msg.style.display === "block") {
+                msg.style.display = "none";
+            } else {
+                msg.style.display = "block";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
